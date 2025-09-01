@@ -23,6 +23,3 @@ Este é o repositório do meu portfólio pessoal, desenvolvido com o objetivo de
 ---
 
 ## [🔗 Acesse o Portfólio Online!](https://gekyume-serna.netlify.app)
-
-
-
