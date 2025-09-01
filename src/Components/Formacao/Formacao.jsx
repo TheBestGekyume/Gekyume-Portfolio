@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import "./Formacao.scss";
-import ImgSenacWebDev from "../../../assets/images/certificados/SenacWebDev.webp";
-import ImgAdaWebDev from "../../../assets/images/certificados/AdaWebDev.webp";
-import ImgCCNAv7 from "../../../assets/images/certificados/CCNAv7.webp";
-import ImgJCACP from "../../../assets/images/certificados/JCACP.webp";
-import ImgCCST from "../../../assets/images/certificados/CCST.webp";
+import ImgSenacWebDev from "/assets/images/certificados/SenacWebDev.webp";
+import ImgAdaWebDev from "/assets/images/certificados/AdaWebDev.webp";
+import ImgCCNAv7 from "/assets/images/certificados/CCNAv7.webp";
+import ImgJCACP from "/assets/images/certificados/JCACP.webp";
+import ImgCCST from "/assets/images/certificados/CCST.webp";
 
 const formacoes = [
   { img: ImgSenacWebDev, title: "Qualificação Profissional em Web Full Stack" },
