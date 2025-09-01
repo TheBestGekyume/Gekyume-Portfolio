@@ -6,25 +6,23 @@ import { Formacao } from "./Components/Formacao/Formacao";
 import { Sobre } from "./Components/Sobre/Sobre";
 import { Contato } from "./Components/Contato/Contato";
 import { Experiencia } from "./Components/Experiencia/Experiencia";
-
 import Particulas from "./Components/Particulas/Particulas";
-import arrayItemSvg from "./Data/arraySvg";
-import arrayProjetos from "./Data/arrayProjetos";
+
 
 
 export function App() {
- 
+
 
   return (
     <div className="App">
 
       <Navbar />
 
-      <Header/>
+      <Header />
 
-      <Projetos  />
+      <Projetos />
 
-      <Experiencia/>
+      <Experiencia />
 
       <Formacao />
 
