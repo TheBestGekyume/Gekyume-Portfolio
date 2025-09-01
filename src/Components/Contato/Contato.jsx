@@ -1,5 +1,5 @@
 import "./Contato.scss";
-import curriculoPDF from "../../../Assets/Curriculo-Gekyume-Serna.pdf"
+import curriculoPDF from "../../../assets/Curriculo-Gekyume-Serna.pdf"
 export function Contato() {
     return (
         <footer id="contato" className="text-center py-4 border-top">

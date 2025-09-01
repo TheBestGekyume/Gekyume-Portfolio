@@ -1,6 +1,6 @@
 import "./Sobre.scss";
 import { useState } from "react";
-import FotoDePerfil from "../../../Assets/Images/Foto-De-Perfil-Gekyume.webp"
+import FotoDePerfil from "../../../assets/images/Foto-De-Perfil-Gekyume.webp"
 
 export function Sobre() {
 
@@ -49,13 +49,13 @@ export function Sobre() {
 
                         <p className="px-2 px-md-0">
                             Sou estudante de Análise e Desenvolvimento de Sistemas, tenho 20 anos de idade e me
-                            interesso especialmente nas áreas de Desenvolvimento Web e Cibersegurança. Gosto de 
-                            explorar como a tecnologia pode impactar positivamente o dia a dia das pessoas, seja 
+                            interesso especialmente nas áreas de Desenvolvimento Web e Cibersegurança. Gosto de
+                            explorar como a tecnologia pode impactar positivamente o dia a dia das pessoas, seja
                             promovendo inclusão digital, otimizando tarefas rotineiras ou oferecendo formas seguras
                             e acessíveis de lidar com informações.
                             Tenho afinidade com temas como Pentest, Segurança da Informação, Redes de Computadores e
                             Desenvolvimento Web, tanto no Front-End quanto no Back-End. Busco constantemente aprender
-                            novas ferramentas, entender arquiteturas, padrões e boas práticas, além de experimentar 
+                            novas ferramentas, entender arquiteturas, padrões e boas práticas, além de experimentar
                             na prática por meio de projetos e estudos.
                             A tecnologia, para mim, vai além do código, é uma forma de pensar e resolver problemas.
                             Encaro os estudos e os projetos como oportunidades de aprofundar conhecimentos, construir

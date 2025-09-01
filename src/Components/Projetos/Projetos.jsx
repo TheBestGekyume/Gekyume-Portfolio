@@ -31,7 +31,7 @@ export function Projetos() {
   return (
     <section id="projetos" className="pb-5">
       <div className="divAnimada" ref={divAnimadaRef}>
-        <h3 className="text-white fs-2 fw-bolder">Meus Projetos</h3>
+        <h3 className="text-white fs-2 fw-bolder">Meus projetos</h3>
       </div>
 
       <div className="container">
