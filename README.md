@@ -1,2 +1,2 @@
-### Boa-Vindas ao Meu Portifólio, acesse-o para saber mais! ;)
+### Boa-Vindas ao Meu Portfólio, acesse-o para saber mais! ;)
 

@@ -1,11 +1,12 @@
 import "./Header.scss";
-import React from "react";
+import arrayItemSvg from "../../Data/arraySvg";
+import { ItemSvg } from "../ItemSvg/ItemSvg";
 
-export function Header({ children }) {
+export function Header({  }) {
   return (
     <section id="header" className="d-flex justify-content-center align-items-center text-white">
       <div className="div-content py-4 px-3">
-        <h2>Boa-Vindas ao Meu Portifólio!</h2>
+        <h2>Boa-Vindas ao Meu Portfólio!</h2>
 
         <h3>
           <span>Desenvolvedor Front-End</span>
@@ -21,7 +22,18 @@ export function Header({ children }) {
         <hr />
         <h3 className="mx-auto text-center p-0 m-0">Minhas</h3>
         <h3 className="mx-auto text-center mb-4 "><span>Linguagens</span> & <span>Tecnologias</span></h3>
-        <div className="text-center mx-auto svg-content">{children}</div>
+        <div className="text-center mx-auto svg-content">
+
+          {arrayItemSvg.slice(0, 16).map((item, index) => (
+          <ItemSvg
+            key={index}
+            title={item.title}
+            color={item.color}
+            link={item.link}
+            path={item.path}
+          />
+        ))}
+        </div>
 
       </div>
 

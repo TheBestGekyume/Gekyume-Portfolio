@@ -1,9 +1,10 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Projeto } from "../Projeto/Projeto";
+import arrayProjetos from "../../Data/arrayProjetos";
 import "./Projetos.scss";
 
-export function Projetos({ projetos }) {
+export function Projetos() {
 
   const divAnimadaRef = useRef(null);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
@@ -42,17 +43,15 @@ export function Projetos({ projetos }) {
               <AnimatePresence mode="wait">
                 <Projeto
                   key={`single-${selectedProjectIndex}`}
-                  imageSrc={projetos[selectedProjectIndex].imageSrc}
-                  title={projetos[selectedProjectIndex].title}
-                  linkRepo={projetos[selectedProjectIndex].linkRepo}
-                  linkSite={projetos[selectedProjectIndex].linkSite}
-                  description={projetos[selectedProjectIndex].description}
-                  icons={projetos[selectedProjectIndex].icons}
+                  imageSrc={arrayProjetos[selectedProjectIndex].imageSrc}
+                  title={arrayProjetos[selectedProjectIndex].title}
+                  linkRepo={arrayProjetos[selectedProjectIndex].linkRepo}
+                  linkSite={arrayProjetos[selectedProjectIndex].linkSite}
+                  description={arrayProjetos[selectedProjectIndex].description}
+                  icons={arrayProjetos[selectedProjectIndex].icons}
                   isSelected={true}
                   onToggle={() => handleReturnToList()}
                 />
-
-
 
               </AnimatePresence>
             </div>
@@ -64,7 +63,7 @@ export function Projetos({ projetos }) {
           <div className="list-view-wrapper">
             <div className="list">
               <AnimatePresence>
-                {projetos.map((projeto, index) => (
+                {arrayProjetos.map((projeto, index) => (
                   <Projeto
                     key={`list-${index}`}
                     imageSrc={projeto.imageSrc}
