@@ -1,5 +1,5 @@
 import "./Contato.scss";
-import curriculoPDF from "/curriculoGekyumeSerna.pdf"
+import curriculoPDF from "/assets/curriculoGekyumeSerna.pdf"
 export function Contato() {
     return (
         <footer id="contato" className="text-center py-4 border-top">
@@ -42,7 +42,7 @@ export function Contato() {
 
                 <a
                     href={curriculoPDF}
-                    download={curriculoPDF}
+                    download="Gekyume_Serna_Curriculo.pdf"
                     className="contact-link"
                 >
                     <i className="bi bi-download"></i> Currículo
