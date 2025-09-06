@@ -1,8 +1,8 @@
-import "./Sobre.scss";
+import "./About.scss";
 import { useState } from "react";
 import FotoDePerfil from "/assets/images/fotoDePerfilGekyume.webp"
 
-export function Sobre() {
+export function About() {
 
     const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
 
@@ -24,7 +24,7 @@ export function Sobre() {
     }
 
     return (
-        <section id="sobreMim" className="text-white py-4 border-top">
+        <section id="about" className="text-white py-4 border-top">
 
             <div className="container">
 

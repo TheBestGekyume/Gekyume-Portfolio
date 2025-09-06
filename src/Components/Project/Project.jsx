@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { ItemSvg } from "../ItemSvg/ItemSvg";
-import "./Projeto.scss";
+import { SvgIcon } from "../SvgIcon/SvgIcon";
+import "./Project.scss";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -13,11 +13,11 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 0, x: 100, scale: 2},
-  visible: { opacity: 1, y: 0, x: 0, scale: 1 ,transition: { type: "spring", stiffness: 80 } },
+  hidden: { opacity: 0, y: 0, x: 100, scale: 2 },
+  visible: { opacity: 1, y: 0, x: 0, scale: 1, transition: { type: "spring", stiffness: 80 } },
 };
 
-export const Projeto = ({
+export const Project = ({
   imageSrc,
   title,
   description,
@@ -76,7 +76,7 @@ export const Projeto = ({
               >
                 {icons.map((icon, index) => (
                   <motion.div key={index} variants={itemVariants}>
-                    <ItemSvg
+                    <SvgIcon
                       title={icon.title}
                       color={icon.color}
                       link={icon.link}

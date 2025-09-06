@@ -1,8 +1,8 @@
 import "./Header.scss";
-import arrayItemSvg from "../../Data/arraySvg";
-import { ItemSvg } from "../ItemSvg/ItemSvg";
+import arraySvgIcons from "../../Data/arraySvgIcons";
+import { SvgIcon } from "../SvgIcon/SvgIcon";
 
-export function Header({  }) {
+export function Header({ }) {
   return (
     <section id="header" className="d-flex justify-content-center align-items-center text-white">
       <div className="div-content py-4 px-3">
@@ -24,15 +24,15 @@ export function Header({  }) {
         <h3 className="mx-auto text-center mb-4 "><span>Linguagens</span> & <span>Tecnologias</span></h3>
         <div className="text-center mx-auto svg-content">
 
-          {arrayItemSvg.slice(0, 16).map((item, index) => (
-          <ItemSvg
-            key={index}
-            title={item.title}
-            color={item.color}
-            link={item.link}
-            path={item.path}
-          />
-        ))}
+          {arraySvgIcons.slice(0, 16).map((item, index) => (
+            <SvgIcon
+              key={index}
+              title={item.title}
+              color={item.color}
+              link={item.link}
+              path={item.path}
+            />
+          ))}
         </div>
 
       </div>

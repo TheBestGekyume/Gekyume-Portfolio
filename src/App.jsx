@@ -1,17 +1,14 @@
 import "./styles/App.scss";
 import { Header } from "./Components/Header/Header";
 import { Navbar } from "./Components/Navbar/Navbar";
-import { Projetos } from "./Components/Projetos/Projetos";
-import { Formacao } from "./Components/Formacao/Formacao";
-import { Sobre } from "./Components/Sobre/Sobre";
-import { Contato } from "./Components/Contato/Contato";
-import { Experiencia } from "./Components/Experiencia/Experiencia";
-import Particulas from "./Components/Particulas/Particulas";
-
-
+import { Projects } from "./Components/Projects/Projects";
+import { Certificates } from "./Components/Certificates/Certificates";
+import { About } from "./Components/About/About";
+import { Contact } from "./Components/Contact/Contact";
+import { Experience } from "./Components/Experience/Experience";
+import { Background } from "./Components/Background/Background";
 
 export function App() {
-
 
   return (
     <div className="App">
@@ -20,17 +17,17 @@ export function App() {
 
       <Header />
 
-      <Projetos />
+      <Projects />
 
-      <Experiencia />
+      <Experience />
 
-      <Formacao />
+      <Certificates />
 
-      <Sobre />
+      <About />
 
-      <Contato />
+      <Contact />
 
-      <Particulas id="particulas" />
+      <Background />
 
     </div>
   );

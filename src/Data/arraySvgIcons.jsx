@@ -1,4 +1,4 @@
-const arrayItemSvg = [
+const arraySvgIcons = [
     {
         title: "HTML5",
         color: "#E34F26",
@@ -122,4 +122,4 @@ const arrayItemSvg = [
     },
 ];
 
-export default arrayItemSvg;
+export default arraySvgIcons;
