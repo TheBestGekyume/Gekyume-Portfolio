@@ -4,8 +4,8 @@ import { SvgIcon } from "../SvgIcon/SvgIcon";
 
 export function Header({ }) {
   return (
-    <section id="header" className="d-flex justify-content-center align-items-center text-white">
-      <div className="div-content py-4 px-3">
+    <header id="header" className="d-flex justify-content-center align-items-center text-white">
+      <section className="section-content py-4 px-3">
         <h2>Boa-Vindas ao Meu Portfólio!</h2>
 
         <h3>
@@ -35,8 +35,8 @@ export function Header({ }) {
           ))}
         </div>
 
-      </div>
+      </section>
 
-    </section>
+    </header>
   );
 }
