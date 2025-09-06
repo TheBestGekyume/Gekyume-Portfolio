@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Rubik Glitch
-- Font Author: Copyright 2020 The Rubik Filtered Project Authors (https://github.com/NaN-xyz/Rubik-Filtered)
-- Font Source: https://fonts.gstatic.com/s/rubikglitch/v2/qkBSXv8b_srFRYQVYrDKh9ZvmC7HONiSFQ.ttf
-- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
