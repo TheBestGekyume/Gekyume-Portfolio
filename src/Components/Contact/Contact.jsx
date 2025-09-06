@@ -1,8 +1,8 @@
-import "./Contato.scss";
+import "./Contact.scss";
 import curriculoPDF from "/assets/curriculoGekyumeSerna.pdf"
-export function Contato() {
+export function Contact() {
     return (
-        <footer id="contato" className="text-center py-4 border-top">
+        <footer id="contact" className="text-center py-4 border-top">
             <h4 className="pt-1 fw-semibold">Contate-me!</h4>
             <div className="
             container

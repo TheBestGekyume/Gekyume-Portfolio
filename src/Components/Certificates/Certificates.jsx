@@ -1,20 +1,8 @@
 import { useEffect } from "react";
-import "./Formacao.scss";
-import ImgSenacWebDev from "/assets/images/certificados/SenacWebDev.webp";
-import ImgAdaWebDev from "/assets/images/certificados/AdaWebDev.webp";
-import ImgCCNAv7 from "/assets/images/certificados/CCNAv7.webp";
-import ImgJCACP from "/assets/images/certificados/JCACP.webp";
-import ImgCCST from "/assets/images/certificados/CCST.webp";
+import "./Certificates.scss";
+import arrayCertificates from "../../Data/arrayCertificates";
 
-const formacoes = [
-  { img: ImgSenacWebDev, title: "Qualificação Profissional em Web Full Stack" },
-  { img: ImgAdaWebDev, title: "Santander Coders 2024 (Trilha Front-End)" },
-  { img: ImgCCNAv7, title: "CCNAv7 - Introdução às redes" },
-  { img: ImgJCACP, title: "Junior Cybersecurity Analyst Career Path" },
-  { img: ImgCCST, title: "CCST - Cybersecurity" },
-];
-
-export function Formacao() {
+export function Certificates() {
   useEffect(() => {
     const carousel = document.getElementById("carousel");
     const items = carousel.querySelectorAll(".carousel-item");
@@ -40,12 +28,12 @@ export function Formacao() {
   }, []);
 
   return (
-    <section id="formacao" className="container-flex py-5">
+    <section id="certificates" className="container-flex py-5">
       <h3 className="text-center fw-bolder">Certificados</h3>
 
       <div id="carousel" className="carousel slide container text-white" data-bs-ride="carousel">
         <div className="carousel-indicators">
-          {formacoes.map((_, index) => (
+          {arrayCertificates.map((_, index) => (
             <button
               key={index}
               type="button"
@@ -58,7 +46,7 @@ export function Formacao() {
         </div>
 
         <div className="carousel-inner pb-2">
-          {formacoes.map((item, index) => (
+          {arrayCertificates.map((item, index) => (
             <div key={index} className={`carousel-item animate-slide p-5 ${index === 0 ? "active" : ""}`}>
               <div className="carroItem mx-auto">
                 <div className="border rounded-3">

@@ -1,6 +1,6 @@
-import "./Experiencia.scss"
+import "./Experience.scss"
 
-export function Experiencia() {
+export function Experience() {
 
     const items = [
         {
@@ -34,7 +34,7 @@ export function Experiencia() {
       ];
 
     return (
-        <section id="experiencia" className="container-fluid pt-5">
+        <section id="experience" className="container-fluid pt-5">
             <h3 className="text-center m-0 fw-bolder">Experiência <span>Profissional</span></h3>
 
 

@@ -44,7 +44,7 @@ export function Navbar() {
             <li className="nav-item">
               <Link
                 className="link-react"
-                to="projetos"
+                to="projects"
                 smooth={true}
                 duration={750}
                 offset={-70}
@@ -57,7 +57,7 @@ export function Navbar() {
             <li className="nav-item">
               <Link
                 className="link-react"
-                to="experiencia"
+                to="experience"
                 smooth={true}
                 duration={750}
                 offset={-70}
@@ -71,7 +71,7 @@ export function Navbar() {
               <Link
                 href="#"
                 className="link-react"
-                to="formacao"
+                to="certificates"
                 smooth={true}
                 duration={750}
                 offset={-70}
@@ -85,7 +85,7 @@ export function Navbar() {
             <li className="nav-item">
               <Link
                 className="link-react"
-                to="sobreMim"
+                to="about"
                 smooth={true}
                 duration={750}
                 offset={-70}
@@ -98,7 +98,7 @@ export function Navbar() {
             <li className="nav-item">
               <Link
                 className="link-react"
-                to="contato"
+                to="contact"
                 smooth={true}
                 duration={750}
                 offset={-70}

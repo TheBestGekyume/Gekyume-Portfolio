@@ -1,10 +1,10 @@
 import { useState, useRef, useLayoutEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-import { Projeto } from "../Projeto/Projeto";
-import arrayProjetos from "../../Data/arrayProjetos";
-import "./Projetos.scss";
+import { Project } from "../Project/Project";
+import projectArray from "../../Data/projectArray";
+import "./Projects.scss";
 
-export function Projetos() {
+export function Projects() {
 
   const divAnimadaRef = useRef(null);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
@@ -29,7 +29,7 @@ export function Projetos() {
   };
 
   return (
-    <section id="projetos" className="pb-5">
+    <section id="projects" className="pb-5">
       <div className="divAnimada" ref={divAnimadaRef}>
         <h3 className="text-white fs-2 fw-bolder">Meus projetos</h3>
       </div>
@@ -41,14 +41,14 @@ export function Projetos() {
 
             <div className="px-1 px-lg-5 mx-auto mx-lg-5">
               <AnimatePresence mode="wait">
-                <Projeto
+                <Project
                   key={`single-${selectedProjectIndex}`}
-                  imageSrc={arrayProjetos[selectedProjectIndex].imageSrc}
-                  title={arrayProjetos[selectedProjectIndex].title}
-                  linkRepo={arrayProjetos[selectedProjectIndex].linkRepo}
-                  linkSite={arrayProjetos[selectedProjectIndex].linkSite}
-                  description={arrayProjetos[selectedProjectIndex].description}
-                  icons={arrayProjetos[selectedProjectIndex].icons}
+                  imageSrc={projectArray[selectedProjectIndex].imageSrc}
+                  title={projectArray[selectedProjectIndex].title}
+                  linkRepo={projectArray[selectedProjectIndex].linkRepo}
+                  linkSite={projectArray[selectedProjectIndex].linkSite}
+                  description={projectArray[selectedProjectIndex].description}
+                  icons={projectArray[selectedProjectIndex].icons}
                   isSelected={true}
                   onToggle={() => handleReturnToList()}
                 />
@@ -63,14 +63,14 @@ export function Projetos() {
           <div className="list-view-wrapper">
             <div className="list">
               <AnimatePresence>
-                {arrayProjetos.map((projeto, index) => (
-                  <Projeto
+                {projectArray.map((project, index) => (
+                  <Project
                     key={`list-${index}`}
-                    imageSrc={projeto.imageSrc}
-                    title={projeto.title}
-                    linkRepo={projeto.linkRepo}
-                    linkSite={projeto.linkSite}
-                    description={projeto.description}
+                    imageSrc={project.imageSrc}
+                    title={project.title}
+                    linkRepo={project.linkRepo}
+                    linkSite={project.linkSite}
+                    description={project.description}
                     isSelected={false}
                     onToggle={() => handleProjectSelect(index)}
                   />

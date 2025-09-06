@@ -1,16 +1,16 @@
-import ImgFormReact from "/assets/images/projetos/formReact.webp";
-import ImgRainyNight from "/assets/images/projetos/rainyNight.webp";
-import ImgRiotCopy from "/assets/images/projetos/riotCopy.webp";
-import ImgMorgannaWebsite from "/assets/images/projetos/morgannaWebsite.webp"
-import ImgViacaoCalango from "/assets/images/projetos/viacaoCalango.webp";
-import ImgToDoList from "/assets/images/projetos/toDoList.webp";
-import ImgBibliotecaPoo from "/assets/images/projetos/bibliotecaPoo.webp";
-import ImgMedConAgular from "/assets/images/projetos/medConAngular.webp";
-import ImgHangMan from "/assets/images/projetos/hangman.webp";
-import ImgEmailClassifier from "/assets/images/projetos/emailClassifier.webp"
-import arrayItemSvg from "./arraySvg";
+import ImgFormReact from "/assets/images/projects/formReact.webp";
+import ImgRainyNight from "/assets/images/projects/rainyNight.webp";
+import ImgRiotCopy from "/assets/images/projects/riotCopy.webp";
+import ImgMorgannaWebsite from "/assets/images/projects/morgannaWebsite.webp"
+import ImgViacaoCalango from "/assets/images/projects/viacaoCalango.webp";
+import ImgToDoList from "/assets/images/projects/toDoList.webp";
+import ImgBibliotecaPoo from "/assets/images/projects/bibliotecaPoo.webp";
+import ImgMedConAgular from "/assets/images/projects/medConAngular.webp";
+import ImgHangMan from "/assets/images/projects/hangman.webp";
+import ImgEmailClassifier from "/assets/images/projects/emailClassifier.webp"
+import arraySvgIcons from "./arraySvgIcons";
 
-const arrayProjetos = [
+const projectArray = [
     {
         imageSrc: ImgFormReact,
         title: "Formulário em ReactJs",
@@ -21,7 +21,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/Form-React",
         linkSite: "https://thebestgekyume.github.io/Form-React/",
         icons: ["HTML5", "CSS3", "JavaScript", "React", "Bootstrap"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -36,7 +36,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/Rainy-Night",
         linkSite: "https://thebestgekyume.github.io/Rainy-Night/",
         icons: ["HTML5", "CSS3", "JavaScript", "Bootstrap"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -51,7 +51,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/Riot-Copy",
         linkSite: "https://thebestgekyume.github.io/Riot-Copy",
         icons: ["HTML5", "CSS3", "Sass", "JavaScript", "Bootstrap"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -66,7 +66,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/Case-Desafio-AutoU-Classifica-o-de-Email",
         linkSite: "https://case-desafio-auto-u-classifica-o-de.vercel.app/",
         icons: ["React", "TypeScript", "Sass", "Bootstrap", "Python", "spaCy", "Gemini", "FastAPI"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -84,7 +84,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/ViacaoCalango",
         linkSite: null,
         icons: ["HTML5", "CSS3", "Sass", "JavaScript", "React", "PHP", "MySql", "Bootstrap"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -101,7 +101,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/WebSiteMorganna",
         linkSite: "https://morgannalessa.netlify.app/",
         icons: ["HTML5", "CSS3", "Sass", "JavaScript", "React", "Bootstrap"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -113,7 +113,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/ToDo-List-Angular",
         linkSite: "https://to-do-list-angular-khaki.vercel.app/",
         icons: ["HTML5", "CSS3", "TypeScript", "Angular", "Bootstrap"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -127,7 +127,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/MedCon-Angular",
         linkSite: null,
         icons: ["HTML5", "CSS3", "TypeScript", "Angular", "Bootstrap", "JWT"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -139,7 +139,7 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/Biblioteca---TypeScript-POO",
         linkSite: null,
         icons: ["TypeScript"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
     {
@@ -151,11 +151,11 @@ const arrayProjetos = [
         linkRepo: "https://github.com/TheBestGekyume/hagman-ada",
         linkSite: null,
         icons: ["HTML5", "CSS3", "JavaScript"].map(name =>
-            arrayItemSvg.find(icon => icon.title === name)
+            arraySvgIcons.find(icon => icon.title === name)
         ).filter(Boolean),
     },
 
 
 ];
 
-export default arrayProjetos;
+export default projectArray;
