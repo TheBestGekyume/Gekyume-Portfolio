@@ -1,6 +1,5 @@
 #header {
     margin-block: 3rem;
-    background-color: transparent;
 
     .section-content {
         max-width: 60vw;
@@ -17,10 +16,8 @@
         span {
             color: #7132b9;
         }
-      
 
         h3 {
-            text-wrap: nowrap;
             text-align: center;
 
             &:first-of-type {
@@ -51,8 +48,8 @@
     }
 
     @media (max-width: 768px) {
-        div.div-content {
-            max-width: 80vw;
+        .section-content {
+            max-width: 85vw;
 
             h2 {
                 font-size: 2.25rem;
@@ -70,8 +67,8 @@
     }
 
     @media (max-width: 412px) {
-        div.div-content {
-            max-width: 90vw;
+        .section-content {
+            max-width: 95vw;
 
             h3 {
                 font-size: 1.4rem;

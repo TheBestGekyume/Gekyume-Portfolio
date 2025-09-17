@@ -1,7 +1,7 @@
 import { useState, useRef, useLayoutEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Project } from "../Project/Project";
-import projectArray from "../../Data/projectArray";
+import arrayProject from "../../Data/arrayProject";
 import "./Projects.scss";
 
 export function Projects() {
@@ -39,16 +39,17 @@ export function Projects() {
         {isSingleView && (
           <div className="single-view-wrapper">
 
-            <div className="px-1 px-lg-5 mx-auto mx-lg-5">
+            <div className="px-1 px-lg-5 mx-auto mx-lg-5 border-none">
               <AnimatePresence mode="wait">
                 <Project
                   key={`single-${selectedProjectIndex}`}
-                  imageSrc={projectArray[selectedProjectIndex].imageSrc}
-                  title={projectArray[selectedProjectIndex].title}
-                  linkRepo={projectArray[selectedProjectIndex].linkRepo}
-                  linkSite={projectArray[selectedProjectIndex].linkSite}
-                  description={projectArray[selectedProjectIndex].description}
-                  icons={projectArray[selectedProjectIndex].icons}
+                  imageSrc={arrayProject[selectedProjectIndex].imageSrc}
+                  title={arrayProject[selectedProjectIndex].title}
+                  linkRepo={arrayProject[selectedProjectIndex].linkRepo}
+                  linkSite={arrayProject[selectedProjectIndex].linkSite}
+                  description={arrayProject[selectedProjectIndex].description}
+                  icons={arrayProject[selectedProjectIndex].icons}
+                  highlight={arrayProject[selectedProjectIndex].highlight}
                   isSelected={true}
                   onToggle={() => handleReturnToList()}
                 />
@@ -63,7 +64,7 @@ export function Projects() {
           <div className="list-view-wrapper">
             <div className="list">
               <AnimatePresence>
-                {projectArray.map((project, index) => (
+                {arrayProject.map((project, index) => (
                   <Project
                     key={`list-${index}`}
                     imageSrc={project.imageSrc}
@@ -71,6 +72,7 @@ export function Projects() {
                     linkRepo={project.linkRepo}
                     linkSite={project.linkSite}
                     description={project.description}
+                    highlight={project.highlight}
                     isSelected={false}
                     onToggle={() => handleProjectSelect(index)}
                   />

@@ -23,6 +23,7 @@ export const Project = ({
   description,
   linkRepo,
   linkSite,
+  highlight,
   isSelected,
   onToggle,
   icons,
@@ -35,17 +36,20 @@ export const Project = ({
       transition={{ duration: 0.5 }}
     >
       {!isSelected ? (
-        <div className="card pt-2 pt-md-0 text-bg-dark text-decoration-none" onClick={onToggle}>
+        <div className={`card mb-2 pt-2 pt-md-0  text-bg-dark `} onClick={onToggle}>
           <h5 className="card-title d-block d-md-none text-center fw-bold">{title}</h5>
-          <img src={imageSrc} className="card-img" alt={title} />
-          <div className="d-flex align-items-baseline overlay">
+          <img src={imageSrc} className={`card-img ${highlight ? "highlight" : ""}`} alt={title} />
+          <div className={`d-flex align-items-baseline overlay`}>
             <div className="overlay-content d-none d-md-inline p-3 mx-auto">
               <h5 className="card-title text-center m-0 fw-bold">{title}</h5>
             </div>
           </div>
         </div>
       ) : (
-        <div className="selected mt-2 py-4 mb-5 px-3 border border-3 border-white rounded-4 mx-auto">
+        <div
+          className={`selected mt-2 py-4 mb-5 px-3
+          rounded-4 mx-auto ${highlight ? "highlight" : ""}`}
+        >
 
           <div className="d-flex justify-content-between mb-3">
             <button
@@ -56,9 +60,7 @@ export const Project = ({
             >
               <i className="bi bi-x-circle"></i>
             </button>
-
             <h5 className="text-center mx-auto fw-bold fs-3 pt-2 px-4">{title}</h5>
-
           </div>
 
           <p className="text-white text-center mb-4 px-4">{description}</p>

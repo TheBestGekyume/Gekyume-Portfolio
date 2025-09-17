@@ -7,37 +7,41 @@ import ImgToDoList from "/assets/images/projects/toDoList.webp";
 import ImgBibliotecaPoo from "/assets/images/projects/bibliotecaPoo.webp";
 import ImgMedConAgular from "/assets/images/projects/medConAngular.webp";
 import ImgHangMan from "/assets/images/projects/hangman.webp";
-import ImgEmailClassifier from "/assets/images/projects/emailClassifier.webp"
+import ImgEmailClassifier from "/assets/images/projects/emailClassifier.webp";
 import arraySvgIcons from "./arraySvgIcons";
 
-const projectArray = [
+const iconMap = Object.fromEntries(arraySvgIcons.map(icon => [icon.title, icon]));
+
+const getIcons = (names) =>
+    names.map(name => iconMap[name]).filter(Boolean);
+
+const arrayProject = [
     {
         imageSrc: ImgFormReact,
         title: "Formulário em ReactJs",
         description: `Este é um formulário simples construído em ReactJs.
-          Após o cadastro de um produto, ele é imediatamente exibido em uma tabela logo abaixo.
-          A tabela permite ordenar os produtos de forma crescente ou decrescente com base em seu valor,
-          oferecendo uma maneira prática de visualizar e organizar as informações.`,
+      Após o cadastro de um produto, ele é imediatamente exibido em uma tabela logo abaixo.
+      A tabela permite ordenar os produtos de forma crescente ou decrescente com base em seu valor,
+      oferecendo uma maneira prática de visualizar e organizar as informações.`,
         linkRepo: "https://github.com/TheBestGekyume/Form-React",
         linkSite: "https://thebestgekyume.github.io/Form-React/",
-        icons: ["HTML5", "CSS3", "JavaScript", "React", "Bootstrap"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["HTML5", "CSS3", "JavaScript", "React", "Bootstrap"]),
+        highlight: false,
     },
     {
         imageSrc: ImgRainyNight,
         title: "Rainy Night - Web Horror Game",
         description: `Rainy Night começou como um trabalho de faculdade,
-          com o objetivo de criar um jogo interativo usando apenas HTML, CSS e JavaScript.
-          Após algumas melhorias e ajustes, o resultado final foi aprimorado.
-          O jogo permite que os jogadores façam escolhas que influenciam o desenrolar da história,
-          proporcionando uma experiência com foco no terror psicológico.
-          Além disso, inclui efeitos sonoros e visuais, aumentando a imersividade. Experimente!`,
+      com o objetivo de criar um jogo interativo usando apenas HTML, CSS e JavaScript.
+      Após algumas melhorias e ajustes, o resultado final foi aprimorado.
+      O jogo permite que os jogadores façam escolhas que influenciam o desenrolar da história,
+      proporcionando uma experiência com foco no terror psicológico.
+      Além disso, inclui efeitos sonoros e visuais, aumentando a imersividade. Experimente!`,
         linkRepo: "https://github.com/TheBestGekyume/Rainy-Night",
         linkSite: "https://thebestgekyume.github.io/Rainy-Night/",
-        icons: ["HTML5", "CSS3", "JavaScript", "Bootstrap"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["HTML5", "CSS3", "JavaScript", "Bootstrap"]),
+        highlight: false,
+
     },
     {
         imageSrc: ImgRiotCopy,
@@ -50,9 +54,9 @@ const projectArray = [
       entre os membros do grupo.`,
         linkRepo: "https://github.com/TheBestGekyume/Riot-Copy",
         linkSite: "https://thebestgekyume.github.io/Riot-Copy",
-        icons: ["HTML5", "CSS3", "Sass", "JavaScript", "Bootstrap"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["HTML5", "CSS3", "Sass", "JavaScript", "Bootstrap"]),
+        highlight: false,
+
     },
     {
         imageSrc: ImgEmailClassifier,
@@ -65,9 +69,8 @@ const projectArray = [
       (ex.: mensagens de felicitações, agradecimentos).`,
         linkRepo: "https://github.com/TheBestGekyume/Case-Desafio-AutoU-Classifica-o-de-Email",
         linkSite: "https://case-desafio-auto-u-classifica-o-de.vercel.app/",
-        icons: ["React", "TypeScript", "Sass", "Bootstrap", "Python", "spaCy", "Gemini", "FastAPI"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["React", "TypeScript", "Sass", "Bootstrap", "Python", "spaCy", "Gemini", "FastAPI"]),
+        highlight: true,
     },
     {
         imageSrc: ImgViacaoCalango,
@@ -83,9 +86,8 @@ const projectArray = [
       do sistema.`,
         linkRepo: "https://github.com/TheBestGekyume/ViacaoCalango",
         linkSite: null,
-        icons: ["HTML5", "CSS3", "Sass", "JavaScript", "React", "PHP", "MySql", "Bootstrap"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["HTML5", "CSS3", "Sass", "JavaScript", "React", "PHP", "MySql", "Bootstrap"]),
+        highlight: false,
     },
     {
         imageSrc: ImgMorgannaWebsite,
@@ -100,9 +102,8 @@ const projectArray = [
        e a responsabilidade de cumprir prazos.`,
         linkRepo: "https://github.com/TheBestGekyume/WebSiteMorganna",
         linkSite: "https://morgannalessa.netlify.app/",
-        icons: ["HTML5", "CSS3", "Sass", "JavaScript", "React", "Bootstrap"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["HTML5", "CSS3", "Sass", "JavaScript", "React", "Bootstrap"]),
+        highlight: true,
     },
     {
         imageSrc: ImgToDoList,
@@ -112,9 +113,8 @@ const projectArray = [
       trabalhos em equipe que realizei quando estava no programa Santander Coders.`,
         linkRepo: "https://github.com/TheBestGekyume/ToDo-List-Angular",
         linkSite: "https://to-do-list-angular-khaki.vercel.app/",
-        icons: ["HTML5", "CSS3", "TypeScript", "Angular", "Bootstrap"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["HTML5", "CSS3", "TypeScript", "Angular", "Bootstrap"]),
+        highlight: false,
     },
     {
         imageSrc: ImgMedConAgular,
@@ -126,9 +126,8 @@ const projectArray = [
       também executado em grupo.`,
         linkRepo: "https://github.com/TheBestGekyume/MedCon-Angular",
         linkSite: null,
-        icons: ["HTML5", "CSS3", "TypeScript", "Angular", "Bootstrap", "JWT"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["HTML5", "CSS3", "TypeScript", "Angular", "Bootstrap", "JWT"]),
+        highlight: false,
     },
     {
         imageSrc: ImgBibliotecaPoo,
@@ -138,9 +137,8 @@ const projectArray = [
        organização do código.`,
         linkRepo: "https://github.com/TheBestGekyume/Biblioteca---TypeScript-POO",
         linkSite: null,
-        icons: ["TypeScript"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["TypeScript"]),
+        highlight: false,
     },
     {
         imageSrc: ImgHangMan,
@@ -150,12 +148,9 @@ const projectArray = [
       com teclado virtual, dicas dinâmicas via API externa e salva a pontuação no localStorage.`,
         linkRepo: "https://github.com/TheBestGekyume/hagman-ada",
         linkSite: null,
-        icons: ["HTML5", "CSS3", "JavaScript"].map(name =>
-            arraySvgIcons.find(icon => icon.title === name)
-        ).filter(Boolean),
+        icons: getIcons(["HTML5", "CSS3", "JavaScript"]),
+        highlight: false,
     },
-
-
 ];
 
-export default projectArray;
+export default arrayProject;
