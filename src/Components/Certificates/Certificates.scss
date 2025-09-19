@@ -1,12 +1,27 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 section#certificates {
     background-color: black;
-    // margin-top: 8rem;
 
     div.carousel-indicators {
         button {
             width: 1.25rem;
             height: 1.25rem;
             margin-inline: 1rem;
+            transition: 250ms;
+
+            &:hover {
+                transform: scale(1.2);
+            }
         }
     }
 
@@ -15,32 +30,21 @@ section#certificates {
         font-size: 2rem;
     }
     .carousel-item.animate-slide {
-        animation: fadeInUp 1s ease forwards;
+        animation: fadeInUp 1s ease;
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        &:active {
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .carroItem {
+        .carousel-content {
             display: flex;
             justify-content: center;
             width: fit-content;
-            object-fit: fill;
             text-align: center;
             transition: 300ms;
             &:hover {
                 transform: translateY(-10px) scale(1.025);
+
+                img {
+                    opacity: 0.95;
+                    box-shadow: 0px 0px 25px 2px #fff;
+                }
             }
 
             h4 {
@@ -55,32 +59,30 @@ section#certificates {
             }
 
             img {
-                object-fit: fill;
-                width: 750px;
-                height: 450px;
+                width: 900px;
+                aspect-ratio: 16 / 9;
                 opacity: 0.75;
                 transition: 300ms;
 
-                &:hover {
-                    opacity: 0.95;
-                    box-shadow: 0px 0px 25px 2px #fff;
+                @media screen and (max-width: 1408px) {
+                    width: 750px;
                 }
 
-                @media screen and (max-width: 1400px) {
-                    width: 550px;
-                    height: 250px;
+                @media screen and (max-width: 1280px) {
+                    width: 650px;
+                }
+
+                @media screen and (max-width: 992px) {
+                    width: 525px;
                 }
 
                 @media screen and (max-width: 768px) {
                     width: 400px;
-                    height: 200px;
                 }
 
                 @media screen and (max-width: 576px) {
                     width: 100%;
                 }
-
-
             }
         }
     }
