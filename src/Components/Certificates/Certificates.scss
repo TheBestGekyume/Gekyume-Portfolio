@@ -33,11 +33,11 @@ section#certificates {
         animation: fadeInUp 1s ease;
 
         .carousel-content {
-            display: flex;
-            justify-content: center;
             width: fit-content;
             text-align: center;
             transition: 300ms;
+            overflow: hidden;
+            
             &:hover {
                 transform: translateY(-10px) scale(1.025);
 
@@ -63,6 +63,7 @@ section#certificates {
                 aspect-ratio: 16 / 9;
                 opacity: 0.75;
                 transition: 300ms;
+                
 
                 @media screen and (max-width: 1408px) {
                     width: 750px;

@@ -63,14 +63,12 @@ export function Certificates() {
               className={`carousel-item p-5 ${index === 0 ? "active animate-slide" : ""}`}
             >
               <div className="carousel-content mx-auto border rounded-3">
-                <div>
-                  <img
-                    src={item.img}
-                    className="rounded-top-3"
-                    alt={`Certificado: ${item.title}`}
-                  />
-                  <h4 className="my-3">{item.title}</h4>
-                </div>
+                <img
+                  src={item.img}
+                  className="rounded-top-2"
+                  alt={`Certificado: ${item.title}`}
+                />
+                <h4 className="my-3">{item.title}</h4>
               </div>
             </div>
           ))}
