@@ -24,6 +24,7 @@ export const Project = ({
   linkRepo,
   linkSite,
   highlight,
+  animate,
   isSelected,
   onToggle,
   icons,
@@ -32,7 +33,7 @@ export const Project = ({
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 1.2 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
       {!isSelected ? (

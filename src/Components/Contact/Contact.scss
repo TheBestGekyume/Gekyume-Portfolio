@@ -11,27 +11,7 @@ footer {
         font-family: "Kode Mono", monospace;
     }
 
-    .btn-custom {
-        background-color: #7132b9b0;
-        color: #fff;
-        font-size: 1.2rem;
-        height: 3.5rem;
-        border: none;
-        border-radius: 10px;
-        transition: 300ms;
-        &:hover {
-            background-color: #7132b9;
-        }
-        &:disabled {
-            background-color: #7132b940;
-            color: #aaa;
-        }
-
-        @media screen and (max-width: 768px) {
-            height: 2.5rem;
-            font-size: 1rem;
-        }
-    }
+    
 
     .contact-link {
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

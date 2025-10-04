@@ -1,4 +1,5 @@
 import { useState, useRef, useLayoutEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import { AnimatePresence } from "framer-motion";
 import { Project } from "../Project/Project";
 import arrayProject from "../../Data/arrayProject";
@@ -9,24 +10,32 @@ export function Projects() {
   const divAnimadaRef = useRef(null);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
   const [isSingleView, setIsSingleView] = useState(false);
+  const [showAllProjects, setshowAllProjects] = useState(false)
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const renderedProjects = isMobile && !showAllProjects
+    ? arrayProject.slice(0, Math.floor(arrayProject.length) / 2)
+    : arrayProject;
 
   useLayoutEffect(() => {
     if (isSingleView && divAnimadaRef.current) {
       const yOffset = 45;
       const y = divAnimadaRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.scrollTo({ top: y });
     }
   }, [isSingleView]);
 
-  const handleProjectSelect = (index) => {
-    setSelectedProjectIndex(index);
-    setIsSingleView(true);
+  const handleProjectSelect = index => {
+    if (isSingleView) {
+      setIsSingleView(false);
+      setSelectedProjectIndex(null);
+    } else {
+      setSelectedProjectIndex(index);
+      setIsSingleView(true);
+    }
   };
 
-  const handleReturnToList = () => {
-    setIsSingleView(false);
-    setSelectedProjectIndex(null);
-  };
+  const togleProjects = () => setshowAllProjects(!showAllProjects);
 
   return (
     <section id="projects" className="pb-5">
@@ -51,7 +60,7 @@ export function Projects() {
                   icons={arrayProject[selectedProjectIndex].icons}
                   highlight={arrayProject[selectedProjectIndex].highlight}
                   isSelected={true}
-                  onToggle={() => handleReturnToList()}
+                  onToggle={() => handleProjectSelect()}
                 />
 
               </AnimatePresence>
@@ -64,7 +73,7 @@ export function Projects() {
           <div className="list-view-wrapper">
             <div className="list">
               <AnimatePresence>
-                {arrayProject.map((project, index) => (
+                {renderedProjects.map((project, index) => (
                   <Project
                     key={`list-${index}`}
                     imageSrc={project.imageSrc}
@@ -79,6 +88,14 @@ export function Projects() {
                 ))}
               </AnimatePresence>
             </div>
+            {isMobile && (
+              <div className="d-flex mt-5">
+                <button className="btn-custom px-3 py-2 mx-auto" onClick={togleProjects}>
+                  {showAllProjects ? "Ver menos" : "Ver mais"}
+                </button>
+              </div>
+            )}
+
           </div>
         )}
       </div>
