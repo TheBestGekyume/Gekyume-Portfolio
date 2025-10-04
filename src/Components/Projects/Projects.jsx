@@ -3,6 +3,8 @@ import { useMediaQuery } from "react-responsive";
 import { AnimatePresence } from "framer-motion";
 import { Project } from "../Project/Project";
 import arrayProject from "../../Data/arrayProject";
+import { Link } from "react-scroll";
+
 import "./Projects.scss";
 
 export function Projects() {
@@ -35,7 +37,7 @@ export function Projects() {
     }
   };
 
-  const togleProjects = () => setshowAllProjects(!showAllProjects);
+  const toggleProjects = () => setshowAllProjects(!showAllProjects);
 
   return (
     <section id="projects" className="pb-5">
@@ -52,13 +54,7 @@ export function Projects() {
               <AnimatePresence mode="wait">
                 <Project
                   key={`single-${selectedProjectIndex}`}
-                  imageSrc={arrayProject[selectedProjectIndex].imageSrc}
-                  title={arrayProject[selectedProjectIndex].title}
-                  linkRepo={arrayProject[selectedProjectIndex].linkRepo}
-                  linkSite={arrayProject[selectedProjectIndex].linkSite}
-                  description={arrayProject[selectedProjectIndex].description}
-                  icons={arrayProject[selectedProjectIndex].icons}
-                  highlight={arrayProject[selectedProjectIndex].highlight}
+                  {...arrayProject[selectedProjectIndex]}
                   isSelected={true}
                   onToggle={() => handleProjectSelect()}
                 />
@@ -76,12 +72,7 @@ export function Projects() {
                 {renderedProjects.map((project, index) => (
                   <Project
                     key={`list-${index}`}
-                    imageSrc={project.imageSrc}
-                    title={project.title}
-                    linkRepo={project.linkRepo}
-                    linkSite={project.linkSite}
-                    description={project.description}
-                    highlight={project.highlight}
+                    {...project}
                     isSelected={false}
                     onToggle={() => handleProjectSelect(index)}
                   />
@@ -89,10 +80,30 @@ export function Projects() {
               </AnimatePresence>
             </div>
             {isMobile && (
-              <div className="d-flex mt-5">
-                <button className="btn-custom px-3 py-2 mx-auto" onClick={togleProjects}>
-                  {showAllProjects ? "Ver menos" : "Ver mais"}
-                </button>
+              <div className="d-flex mt-5 justify-content-center">
+
+                {showAllProjects ?
+                  <Link
+                    to="projects"
+                    smooth={true}
+                    duration={1000}
+                    offset={-70}
+                    tabIndex={0}>
+                    <button className="btn-custom px-3 py-2" onClick={toggleProjects}>
+                      Ver menos
+                    </button>
+                  </Link>
+                  :
+                  <Link
+                    to="experience"
+                    smooth={true}
+                    duration={500}
+                    tabIndex={0}>
+                    <button className="btn-custom px-3 py-2 mx-auto" onClick={toggleProjects}>
+                      Ver mais
+                    </button>
+                  </Link>
+                }
               </div>
             )}
 

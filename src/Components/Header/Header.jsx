@@ -24,13 +24,10 @@ export function Header({ }) {
         <h3 className="mx-auto text-center mb-4 "><span>Linguagens</span> & <span>Tecnologias</span></h3>
         <div className="text-center mx-auto svg-content">
 
-          {arraySvgIcons.slice(0, 16).map((item, index) => (
+          {arraySvgIcons.slice(0, 16).map((icon, index) => (
             <SvgIcon
               key={index}
-              title={item.title}
-              color={item.color}
-              link={item.link}
-              path={item.path}
+              {...icon}
             />
           ))}
         </div>

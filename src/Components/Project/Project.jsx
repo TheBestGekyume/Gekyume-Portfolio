@@ -80,10 +80,7 @@ export const Project = ({
                 {icons.map((icon, index) => (
                   <motion.div key={index} variants={itemVariants}>
                     <SvgIcon
-                      title={icon.title}
-                      color={icon.color}
-                      link={icon.link}
-                      path={icon.path}
+                      {...icon}
                     />
                   </motion.div>
                 ))}
