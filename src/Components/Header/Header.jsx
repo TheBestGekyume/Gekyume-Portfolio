@@ -15,8 +15,10 @@ export function Header({ }) {
           Olá! Meu nome é <span>Gekyume</span>, sou estudante de
           <span> Análise e Desenvolvimento de Sistemas</span> e atuo como desenvolvedor
           Front-end, com foco em <span>React</span> e <span>Angular</span> para criar
-          interfaces modernas e funcionais. Tenho boa <span>lógica de programação </span>
-          e experiência com tecnologias voltadas para a estruturação e desenvolvimento web.
+          interfaces modernas e funcionais. Tenho experiência com desenvolvimento de
+          aplicações web, integração entre <span>front-end</span> e <span>back-end </span>
+          e utilização de boas práticas de código para garantir <span>performance</span> e 
+          <span> manutenibilidade</span>.
         </p>
 
         <hr />

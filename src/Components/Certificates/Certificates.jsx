@@ -68,7 +68,7 @@ export function Certificates() {
                   className="rounded-top-2"
                   alt={`Certificado: ${item.title}`}
                 />
-                <h4 className="my-3">{item.title}</h4>
+                <h4 className="my-3 px-1">{item.title}</h4>
               </div>
             </div>
           ))}
