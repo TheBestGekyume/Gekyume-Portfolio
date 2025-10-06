@@ -37,21 +37,29 @@ export const Project = ({
       transition={{ duration: 0.5 }}
     >
       {!isSelected ? (
-        <div className={`card mb-2 pt-2 pt-md-0  text-bg-dark `} onClick={onToggle}>
+        <div
+          className={`card mb-2 pt-2 pt-md-0 text-bg-dark`}
+          onClick={onToggle}
+        >
           <h5 className="card-title d-block d-md-none text-center fw-bold">{title}</h5>
-          <img src={imageSrc} className={`card-img ${highlight ? "highlight" : ""}`} alt={title} />
-          <div className={`d-flex align-items-baseline overlay`}>
+
+          <div className={`img-wrapper ${highlight ? "highlight" : ""}`}>
+            <img src={imageSrc} className="card-img" alt={title} />
+          </div>
+
+          <div className="d-flex align-items-baseline overlay">
             <div className="overlay-content d-none d-md-inline p-3 mx-auto">
               <h5 className="card-title text-center m-0 fw-bold">{title}</h5>
             </div>
           </div>
         </div>
+
+
       ) : (
         <div
           className={`selected mt-2 py-4 mb-5 px-3
           rounded-4 mx-auto ${highlight ? "highlight" : ""}`}
         >
-
           <div className="d-flex justify-content-between mb-3">
             <button
               type="button"

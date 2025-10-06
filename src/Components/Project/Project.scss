@@ -1,48 +1,59 @@
 .card {
     margin-bottom: 1rem;
-    // background-color: #222 !important;
     background-color: transparent !important;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: 300ms;
+    position: relative;
+    overflow: hidden;
 
-    img {
-        width: 100%;
-        background-color: black;
-        border-radius: 0.5rem;
+    .img-wrapper {
         position: relative;
-        border: 1.5px solid #333;
+        display: inline-block;
+        border-radius: 0.5rem;
 
-        &.highlight {
-            animation: spin 3s linear infinite;
-            border: 1px solid #ef0;
+        img {
+            border-radius: inherit;
+            border: 1.5px solid #333;
+            transition: 300ms;
+        }
 
-            @keyframes spin {
-                0% {
-                    box-shadow: 0px 0px 2px 1px #ef0;
-                }
-                50% {
-                    box-shadow: 0px 0px 15px 2px #ef0;
-                }
-                100% {
-                    box-shadow: 0px 0px 2px 1px #ef0;
-                }
+        &.highlight::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1.5px;
+            background: linear-gradient(120deg, #fbff00, #000, #fbff00);
+            background-size: 300% 300%;
+            animation: borderFlow 5s linear infinite;
+            mask: linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+
+        }
+
+        @keyframes borderFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 300% 50%;
             }
         }
     }
-
     .overlay {
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        inset: 0;
         opacity: 0;
         transition: 300ms;
         background: #00000040;
         border: 1.5px solid transparent;
         border-radius: 0.5rem;
         padding: 1rem;
+        z-index: 3;
 
         &:hover {
             opacity: 1;
