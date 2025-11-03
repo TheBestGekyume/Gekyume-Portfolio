@@ -45,10 +45,10 @@ export function Background() {
                 },
                 links: {
                     color: "#7132b9",
-                    distance: 160,
+                    distance: 150,
                     enable: true,
                     opacity: 0.75,
-                    width: 1.75,
+                    width: 2,
                 },
                 move: {
                     direction: "none",
