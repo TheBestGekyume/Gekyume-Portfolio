@@ -15,7 +15,7 @@ nav.navbar-style {
         background-clip: text;
         background-size: 200% 200%;
         padding: 0;
-        margin-inline: 40px auto;
+        margin-inline: 10px 30px;
         margin-bottom: 0;
         transition: ease;
         cursor: default;
@@ -28,40 +28,49 @@ nav.navbar-style {
             text-decoration: none;
         }
 
-        @media (max-width:768px) {
+        @media (max-width: 768px) {
             margin-left: 12px;
-            
         }
     }
 
     div.collapse,
     div.collapsing {
-        transition: 300ms ease-in-out; // controla a duração
+        transition: 300ms ease-in-out;
 
-        .link-react {
-            padding-block: 0px;
-            margin-inline: 40px;
-            font-size: 18px;
-            color: #666;
-            transition: transparent 600ms;
-            border-bottom: 1px solid transparent;
-            cursor: pointer;
-            text-decoration: none;
-
-            &:hover {
-                transition: 600ms;
-                color: #fff;
-                border-color: #fff;
-            }
-
-            &:focus {
-                transition: 600ms;
-                color: #7132b9;
-                border-bottom-color: none;
-            }
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
 
             @media (max-width: 1260px) {
-                font-size: 1rem;
+                margin-left: 12px;
+                gap: 10px;
+            }
+
+            .link-react {
+                padding-block: 0px;
+                font-size: 18px;
+                color: #666;
+                transition: transparent 600ms;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                text-decoration: none;
+
+                &:hover {
+                    transition: 600ms;
+                    color: #fff;
+                    border-color: #fff;
+                }
+
+                &:focus {
+                    transition: 600ms;
+                    color: #7132b9;
+                    border-bottom-color: none;
+                }
+
+                @media (max-width: 1260px) {
+                    font-size: 1rem;
+                }
             }
         }
     }

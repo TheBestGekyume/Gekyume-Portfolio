@@ -21,12 +21,10 @@ export function Navbar() {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-
-
         </button>
 
         <div className="collapse navbar-collapse" id="navbarCollapse">
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+          <ul className="navbar-nav mb-2 mb-lg-0 mt-3 mt-lg-0">
 
             <li className="nav-item">
               <Link
