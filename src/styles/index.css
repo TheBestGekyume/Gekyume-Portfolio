@@ -1,10 +1,13 @@
-body {
-  color: #fff;
-  background-color: #000;
-  margin: 0;
-  font-family: "Rubik", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #7132b99a #000;
 }
 
-
+body {
+    color: #fff;
+    background-color: #000;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
